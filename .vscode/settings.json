@@ -1,0 +1,18 @@
+{
+    "files.associations": {
+        "*.h" : "c",
+        "stm32f10x.h" : "c",
+        "core_cm3.h"  : "c"
+        },
+    "files.exclude": {
+        "build": true,
+        "*.exe": true,
+        "*.elf": true,
+        "*.bin": true,
+        ".vscode": false,
+    },
+    "editor.formatOnSave": true,
+    "editor.tabSize": 4,
+    "editor.defaultFormatter": "ms-vscode.cpptools",
+    "C_Cpp.intelliSenseEngine": "default"
+}

@@ -1,0 +1,45 @@
+{
+    "configurations": [
+        {
+            "name": "STM32",
+            "includePath": [
+                "D:/BKEU/HALA/10 2021.10/arm-none-eabi/include",
+                //"D:/KeilV5/ARM/PACK/Keil/STM32F1xx_DFP/2.4.1/Device/Include",
+                //"D:/KeilV5/ARM/PACK/ARM/CMSIS/5.3.0/CMSIS/Include",
+                //"D:/KeilV5/ARM/PACK/Keil/STM32F1xx_DFP/2.4.1/Device/StdPeriph_Driver/inc",
+                "D:/KeilV5/ARM/PACK/Keil/STM32F1xx_DFP/2.4.1/Boards/Keil/MCBSTM32C/Middleware/USB/Host/MassStorage/RTE/Device/STM32F107VC",
+                "${workspaceFolder}/platform/bsp/cmsis",
+                "${workspaceFolder}/platform/bsp/device",
+                "${workspaceFolder}/rte/swc_if",
+                "${workspaceFolder}/rte/core/inc",
+                "${workspaceFolder}/platform/autosar_base",
+                "${workspaceFolder}/bsw/ecua/iohwab/inc",
+                "${workspaceFolder}/bsw/communication/canif",
+                "${workspaceFolder}/swc/swc_BrakeAcq",
+                "${workspaceFolder}/swc/swc_cmdcomposer",
+                "${workspaceFolder}/swc/swc_drivemodemgr",
+                "${workspaceFolder}/swc/swc_gearselector",
+                "${workspaceFolder}/swc/swc_pedalacq",
+                "${workspaceFolder}/swc/swc_safetymanager",
+                "${workspaceFolder}/cfg/mcal",
+                "${workspaceFolder}/cfg/ecua",
+                "${workspaceFolder}/bsw/mcal/port",
+                "${workspaceFolder}/bsw/mcal/adc",
+                "${workspaceFolder}/bsw/mcal/dio",
+                "${workspaceFolder}/bsw/mcal/can",
+                "${workspaceFolder}/bsw/mcal/pwm",
+                "${workspaceFolder}/bsw/services/os/inc",
+                "${workspaceFolder}/bsw/services/os/arch/cortexm3_stm32f1"
+            ],
+            "defines": [
+                "STM32F10X_MD",
+                "USE_STDPERIPH_DRIVER"
+
+            ],
+            "compilerPath": "D:/BKEU/HALA/10 2021.10/bin/arm-none-eabi-gcc.exe",
+            "cStandard": "c11",
+            "intelliSenseMode": "gcc-arm"
+        }
+    ],
+    "version": 4
+}

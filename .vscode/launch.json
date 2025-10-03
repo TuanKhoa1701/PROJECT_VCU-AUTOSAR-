@@ -1,0 +1,20 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug (OpenOCD)",
+            "type": "cortex-debug",
+            "request": "launch",
+            "servertype": "openocd",
+            "cwd": "${workspaceFolder}",
+            "executable": "${workspaceFolder}/build/test.elf",
+            "device": "STM32F103C8Tx",
+            "configFiles": [
+                "D:/BKEU/HALA/xpack-openocd-0.12.0-6-win32-x64/xpack-openocd-0.12.0-6/openocd/scripts/interface/stlink.cfg",
+                "D:/BKEU/HALA/xpack-openocd-0.12.0-6-win32-x64/xpack-openocd-0.12.0-6/openocd/scripts/target/stm32f1x.cfg"
+            ],
+            "runToEntryPoint": "main",
+            "svdFile": "${workspaceFolder}/STM32F103xx.svd"
+        }
+    ]
+}
