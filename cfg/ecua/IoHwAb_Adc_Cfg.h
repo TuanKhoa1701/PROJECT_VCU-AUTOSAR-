@@ -8,16 +8,21 @@
  *********************************************/
 #ifndef __IOHWAB_ADC_CFG_H__
 #define __IOHWAB_ADC_CFG_H__
-#include "IoHwAb_Adc.h"
 #include "Port_cfg.h"
 #include "Adc_Cfg.h"
 #include "Pwm_Lcfg.h"
 
+extern const Port_ConfigType portConfig;
+extern const Adc_ConfigType Adc_Configs[];
 typedef struct
 {
     const Port_ConfigType *portConfig;
     const Adc_ConfigType *adcConfig;
-    const Pwm_ConfigType *pwmConfig;
 } IoHwAb0_ConfigType;
+
+const IoHwAb0_ConfigType IoHwAb0_Config = {
+    .portConfig = &portConfig,
+    .adcConfig = &Adc_Configs[0],
+};
 
 #endif /* __IOHWAB_ADC_CFG_H__ */

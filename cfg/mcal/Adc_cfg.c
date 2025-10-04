@@ -58,7 +58,7 @@ void DMA_ADC_isrHandler(void)
         }
     }
 }
-Adc_ConfigType Adc_Configs[1] = {
+Adc_ConfigType Adc_Configs[ADC_MAX_HW] = {
     {.AdcInstance = ADC_INSTANCE_1,
      .ClockPrescaler = 2,
      .ConversionMode = ADC_CONV_MODE_CONTINUOUS,

@@ -25,4 +25,5 @@
  * (khai báo extern, định nghĩa cụ thể ở port_cfg.c)
  **********************************************************/
 extern const Port_PinConfigType PortCfg_Pins[];
+extern const Port_ConfigType portConfig;
 #endif /* PORT_CFG_H */

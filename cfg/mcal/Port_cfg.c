@@ -1,7 +1,7 @@
 /**********************************************************
  * @file    Port_cfg.c
  * @brief   Port Driver Configuration Source File
- * @details File này chứa phần hiện thực các tham số cấu hình 
+ * @details File này chứa phần hiện thực các tham số cấu hình
  *          cho từng chân Port của driver Port theo chuẩn AUTOSAR,
  *          dùng cho STM32F103.
  *
@@ -35,8 +35,7 @@ const Port_PinConfigType PortCfg_Pins[] = {
         .DirectionChangeable = 1,
         .Level = PORT_PIN_LEVEL_HIGH,
         .Pull = PORT_PIN_PULL_NONE,
-        .ModeChangeable = 1
-    },
+        .ModeChangeable = 1},
     /* PA1: DIO, Input, Không đổi chiều, pull-up */
     {
         .PortNum = PORT_ID_A,
@@ -47,20 +46,18 @@ const Port_PinConfigType PortCfg_Pins[] = {
         .DirectionChangeable = 0,
         .Level = PORT_PIN_LEVEL_LOW, /* Không ảnh hưởng nếu là input */
         .Pull = PORT_PIN_PULL_UP,
-        .ModeChangeable = 0
-    },
+        .ModeChangeable = 0},
     /* PB0: DIO, Output, Không đổi chiều, mặc định LOW, không pull */
     {
         .PortNum = PORT_ID_B,
-        .PinNum = 0, 
+        .PinNum = 0,
         .Mode = PORT_PIN_MODE_DIO,
         .Speed = PORT_SPEED_50Mhz, // Tốc độ 50MHz
         .Direction = PORT_PIN_OUT,
         .DirectionChangeable = 0,
         .Level = PORT_PIN_LEVEL_LOW,
         .Pull = PORT_PIN_PULL_NONE,
-        .ModeChangeable = 0
-    },
+        .ModeChangeable = 0},
     /* PC13: DIO, Input, Được phép đổi mode runtime, pull-down */
     {
         .PortNum = PORT_ID_C,
@@ -71,8 +68,7 @@ const Port_PinConfigType PortCfg_Pins[] = {
         .DirectionChangeable = 1,
         .Level = PORT_PIN_LEVEL_LOW,
         .Pull = PORT_PIN_PULL_UP,
-        .ModeChangeable = 1    
-    },
+        .ModeChangeable = 1},
     /*PA7: PWM, OUTPUT*/
     {
         .PortNum = PORT_ID_A,
@@ -80,10 +76,12 @@ const Port_PinConfigType PortCfg_Pins[] = {
         .Mode = PORT_PIN_MODE_PWM,
         .Speed = PORT_SPEED_50Mhz,
         .Direction = PORT_PIN_OUT,
-        .DirectionChangeable =0,
+        .DirectionChangeable = 0,
         .Pull = PORT_PIN_PULL_NONE,
         .Level = PORT_PIN_LEVEL_LOW,
-        .ModeChangeable =0
-    }
+        .ModeChangeable = 0}
     /* ... Thêm cấu hình cho các chân khác tại đây ... */
 };
+Port_ConfigType portConfig = {
+    .PinConfigs = PortCfg_Pins,
+    .PinCount = PortCfg_PinsCount};
